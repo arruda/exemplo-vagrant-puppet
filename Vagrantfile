@@ -15,6 +15,9 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--name", "treinamento_ej"]
   end
 
+  # Para instalar esse pluging no vagrant, rode o comando:
+  # $ vagrant plugin install vagrant-vbguest
+  config.vbguest.auto_update = false
 
   # ensure that it is apt-get updated before puppet,
   # had to put this to puppet find the correct dns
